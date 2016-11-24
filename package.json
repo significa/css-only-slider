@@ -1,0 +1,25 @@
+{
+  "name": "css-only-slider",
+  "version": "1.0.0",
+  "description": "Static responsive slider using CSS and HTML only.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Significa/css-only-slider.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "no-javascript",
+    "slider"
+  ],
+  "author": "Significa",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/Significa/css-only-slider/issues"
+  },
+  "homepage": "https://github.com/Significa/css-only-slider#readme"
+}
