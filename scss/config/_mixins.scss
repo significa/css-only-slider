@@ -1,0 +1,82 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Config
+2.0 Translate
+3.0 Rotate
+4.0 Placeholder
+5.0 Background Image 2x
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Transition
+--------------------------------------------------------------*/
+
+@mixin default-transition($param: all) {
+	transition: $param $normal-transition-time $default-ease;
+}
+
+/*--------------------------------------------------------------
+2.0 Translate
+--------------------------------------------------------------*/
+
+@mixin translateX($value: -50%) {
+	transform: translateX($value);
+}
+
+@mixin translateY($value: -50%) {
+	transform: translateY($value);
+}
+
+@mixin translateXY($value: -50%) {
+	transform: translate($value , $value);
+}
+
+/*--------------------------------------------------------------
+3.0 Rotate
+--------------------------------------------------------------*/
+
+@mixin rotate($rotation: -45deg) {
+	transform: rotate($rotation);
+}
+
+/*--------------------------------------------------------------
+4.0 Placeholder
+--------------------------------------------------------------*/
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+/*--------------------------------------------------------------
+5.0 Background Image 2x
+--------------------------------------------------------------*/
+
+$retina: "only screen and (-webkit-min-device-pixel-ratio: 2),
+          only screen and (min--moz-device-pixel-ratio: 2),
+          only screen and (-o-min-device-pixel-ratio: 2/1),
+          only screen and (min-device-pixel-ratio: 2),
+          only screen and (min-resolution: 192dpi),
+          only screen and (min-resolution: 2dppx)";
+
+@mixin retina-background-image($file, $type) {
+  background-image: url($file ) '.' + $type;;
+
+  @media #{$retina} {
+    background-image: url($file ) '@2x.' + $type;;
+  }
+}

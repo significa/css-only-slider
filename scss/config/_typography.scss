@@ -1,0 +1,172 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 HTML Settings
+2.0 General Settings
+3.0 Heading 1
+4.0 Heading 2
+5.0 Heading 3
+6.0 Uppercase
+7.0 Text
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 HTML settings
+--------------------------------------------------------------*/
+
+html {
+	-webkit-overflow-scrolling: touch;
+
+	box-sizing: border-box;
+
+	-webkit-tap-highwhite-color: transparent;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility
+}
+
+/*--------------------------------------------------------------
+2.0 General Settings
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  display: block;
+
+	font-family: $main-font;
+}
+
+/*--------------------------------------------------------------
+3.0 Heading 1
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+4.0 Heading 2
+--------------------------------------------------------------*/
+
+.heading-2 {
+	font-family: $main-font;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 40px;
+
+  color: $black;
+
+	letter-spacing: 0.3px;
+
+  // COLOR MODIFIERS
+  //.heading-2--white
+  &--white {
+    color: $white;
+	}
+
+  //.heading-2--green
+  &--blue {
+    color: $significa;
+  }
+}
+
+/*--------------------------------------------------------------
+5.0 Heading 3
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+6.0 Uppercase
+--------------------------------------------------------------*/
+
+.uppercase {
+  font-family: $main-font;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+
+  color: $significa;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  // SIZE MODIFIERS
+  //.uppercase--small
+  &--small {
+    font-size: 12px;
+    line-height: 14px;
+
+    letter-spacing: 0.3px;
+  }
+
+  //COLOR MODIFIERS
+  //.uppercase--white
+  &--white {
+    color: $white;
+  }
+
+	//.uppercase--red
+  &--grey {
+    color: $aluminum;
+  }
+
+  //.uppercase--dark
+  &--x-light {
+    color: $moon;
+  }
+}
+
+/*--------------------------------------------------------------
+7.0 Text
+--------------------------------------------------------------*/
+
+.text {
+  font-family: $main-font;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 34px;
+
+  color: $aluminum;
+
+	letter-spacing: 0px;
+
+	@media (max-width: 600px) {
+		font-size: 16px;
+		line-height: 30px;
+	}
+
+  //COLOR MODIFIERS
+  //.text--dark
+  &--dark {
+    color: $night;
+  }
+
+  //.text--white
+  &--white {
+    color: $white;
+  }
+
+	//.text--blue
+  &--blue {
+    color: $significa;
+  }
+
+	// SIZE MODIFIERS
+  //.text--small
+	&--small {
+		font-size: 16px;
+		line-height: 24px;
+
+		letter-spacing: -0.3px;
+	}
+
+	// WEIGHT MODIFIERS
+  //.text--bold
+	&--bold {
+		font-weight: 700;
+	}
+}

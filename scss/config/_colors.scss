@@ -1,39 +1,34 @@
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 Config
-2.0 Elements
-3.0 Layout
-4.0 Blocks
+1.0 Neutral
+2.0 Main Colors
+3.0 Color Pallete
+3.0 Grey Scale
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-1.0 Config
+1.0 Neutral
 --------------------------------------------------------------*/
 
-@import "config/reset";
-
-@import "config/variables";
-@import "config/mixins";
-
-@import "config/colors";
-@import "config/typography";
+$white: #FFF;
+$black: #000;
 
 /*--------------------------------------------------------------
-2.0 Elements
+2.0 Main color
 --------------------------------------------------------------*/
 
-@import "elements/bullets";
-@import "elements/card";
+$significa: #5050FF; // Blue
 
 /*--------------------------------------------------------------
-3.0 Layout
+3.0 Color Pallete
 --------------------------------------------------------------*/
-
-@import "layout/section";
 
 /*--------------------------------------------------------------
-4.0 Blocks
+4.0 Grey Scale
 --------------------------------------------------------------*/
 
-@import "blocks/slider";
+$night: #3E4954; // Dark grey
+$aluminum: #848995; // Grey
+$moon: #E9EFF5; // Lines
+$light: #FBFBFB; // Light grey background

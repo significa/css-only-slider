@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Section
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Section
+--------------------------------------------------------------*/
+
+.section {
+  position: relative;
+
+  width: 100%;
+  padding: 120px 24px;
+
+  // .section__entry
+  &__entry {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+
+    // .section__entry--center
+    &--center {
+      text-align: center;
+    }
+  }
+
+  // .section__title
+  &__title {
+    display: block;
+
+    padding-bottom: 8px;
+  }
+
+  // .section__text
+  &__text {
+    display: block;
+  }
+}

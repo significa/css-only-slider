@@ -1,0 +1,528 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Slider
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Slider
+--------------------------------------------------------------*/
+
+.slider {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // .slider__radio
+  &__radio {
+    display: none;
+  }
+
+  // .slider__holder
+  &__holder {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    @media (max-width: 900px) {
+      max-width: 540px;
+    }
+
+    @media (max-width: 600px) {
+      margin-top: 60px;
+    }
+  }
+
+  // .slider__item
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+
+    opacity: 1;
+
+    cursor: pointer;
+    pointer-events: auto;
+
+    @include default-transition();
+
+    // .slider__item--1
+    &--1 {
+      // When 1 is checked
+      #slide-1:checked ~ .slider__holder & {
+        position: relative;
+        z-index: 2;
+
+        margin-left: 0px;
+
+        transform: scale(1);
+      }
+
+      // When 2 is checked
+      #slide-2:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: -100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 3 is checked
+      #slide-3:checked ~ .slider__holder & {
+        z-index: 0;
+
+        margin-left: -210px;
+
+        transform: scale(0.65);
+
+        @media (max-width: 900px) {
+          margin-left: -170px;
+
+          transform: scale(0.75);
+        }
+
+        @media (max-width: 768px) {
+          opacity: 0;
+        }
+      }
+
+      // When 4 is checked
+      #slide-4:checked ~ .slider__holder & {
+        z-index: -1;
+
+        margin-left: -210px;
+
+        opacity: 0;
+
+        transform: scale(0.65);
+      }
+
+      // When 5 is checked
+      #slide-5:checked ~ .slider__holder & {
+        z-index: -1;
+
+        margin-left: -210px;
+
+        opacity: 0;
+
+        transform: scale(0.65);
+      }
+    }
+
+    // .slider__item--2
+    &--2 {
+      // When 1 is checked
+      #slide-1:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: 100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 2 is checked
+      #slide-2:checked ~ .slider__holder & {
+        position: relative;
+        z-index: 2;
+
+        margin-left: 0px;
+
+        transform: scale(1);
+      }
+
+      // When 3 is checked
+      #slide-3:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: -100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 4 is checked
+      #slide-4:checked ~ .slider__holder & {
+        z-index: 0;
+
+        margin-left: -210px;
+
+        transform: scale(0.65);
+
+        @media (max-width: 900px) {
+          margin-left: -170px;
+
+          transform: scale(0.75);
+        }
+
+        @media (max-width: 768px) {
+          opacity: 0;
+        }
+      }
+
+      // When 5 is checked
+      #slide-5:checked ~ .slider__holder & {
+        z-index: -1;
+
+        margin-left: -210px;
+
+        opacity: 0;
+
+        transform: scale(0.65);
+      }
+    }
+    // .slider__item--3
+    &--3 {
+      // When 1 is checked
+      #slide-1:checked ~ .slider__holder & {
+        z-index: 0;
+
+        margin-left: 210px;
+
+        transform: scale(0.65);
+
+        @media (max-width: 900px) {
+          margin-left: 170px;
+
+          transform: scale(0.75);
+        }
+
+        @media (max-width: 768px) {
+          opacity: 0;
+        }
+      }
+
+      // When 2 is checked
+      #slide-2:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: 100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 3 is checked
+      #slide-3:checked ~ .slider__holder & {
+        position: relative;
+        z-index: 2;
+
+        margin-left: 0px;
+
+        transform: scale(1);
+      }
+
+      // When 4 is checked
+      #slide-4:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: -100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 5 is checked
+      #slide-5:checked ~ .slider__holder & {
+        z-index: 0;
+
+        margin-left: -210px;
+
+        transform: scale(0.65);
+
+        @media (max-width: 900px) {
+          margin-left: -170px;
+
+          transform: scale(0.75);
+        }
+
+        @media (max-width: 768px) {
+          opacity: 0;
+        }
+      }
+    }
+
+    // .slider__item--4
+    &--4 {
+      // When 1 is checked
+      #slide-1:checked ~ .slider__holder & {
+        z-index: -1;
+
+        margin-left: 210px;
+
+        opacity: 0;
+
+        transform: scale(0.65);
+      }
+
+      // When 2 is checked
+      #slide-2:checked ~ .slider__holder & {
+        z-index: 0;
+
+        margin-left: 210px;
+
+        transform: scale(0.65);
+
+        @media (max-width: 900px) {
+          margin-left: 170px;
+
+          transform: scale(0.75);
+        }
+
+        @media (max-width: 768px) {
+          opacity: 0;
+        }
+      }
+
+      // When 3 is checked
+      #slide-3:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: 100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 4 is checked
+      #slide-4:checked ~ .slider__holder & {
+        position: relative;
+        z-index: 2;
+
+        margin-left: 0px;
+
+        transform: scale(1);
+      }
+
+      // When 5 is checked
+      #slide-5:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: -100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+    }
+
+    // .slider__item--5
+    &--5 {
+      // When 1 is checked
+      #slide-1:checked ~ .slider__holder & {
+        z-index: -1;
+
+        margin-left: 210px;
+
+        opacity: 0;
+
+        transform: scale(0.65);
+      }
+
+      // When 2 is checked
+      #slide-2:checked ~ .slider__holder & {
+        z-index: -1;
+
+        margin-left: 210px;
+
+        opacity: 0;
+
+        transform: scale(0.65);
+      }
+
+      // When 3 is checked
+      #slide-3:checked ~ .slider__holder & {
+        z-index: 0;
+
+        margin-left: 210px;
+
+        transform: scale(0.65);
+
+        @media (max-width: 900px) {
+          margin-left: 170px;
+
+          transform: scale(0.75);
+        }
+
+        @media (max-width: 768px) {
+          opacity: 0;
+        }
+      }
+
+      // When 4 is checked
+      #slide-4:checked ~ .slider__holder & {
+        z-index: 1;
+
+        margin-left: 100px;
+
+        transform: scale(0.85);
+
+        @media (max-width: 768px) {
+          opacity: 0.6;
+        }
+      }
+
+      // When 5 is checked
+      #slide-5:checked ~ .slider__holder & {
+        position: relative;
+        z-index: 2;
+
+        margin-left: 0px;
+
+        transform: scale(1);
+      }
+    }
+  }
+
+  // .slider__item-image
+  &__item-image {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+    margin-bottom: 32px;
+  }
+
+  // .slider__item-content
+  &__item-content {
+    padding: 64px 72px;
+
+    @media (max-width: 768px) {
+      padding: 56px 64px;
+    }
+
+    @media (max-width: 600px) {
+      padding: 32px 32px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 40px 24px;
+    }
+  }
+
+  // .slider__item-text
+  &__item-text {
+    line-height: 38px;
+
+    @media (max-width: 600px) {
+      line-height: 34px;
+    }
+  }
+
+  // .slider__item-bottom
+  &__item-bottom {
+    width: 100%;
+    padding: 20px 56px;
+
+    border-top: 1px solid $moon;
+    background: $light;
+
+    @media (max-width: 768px) {
+      padding: 20px 64px;
+    }
+
+    @media (max-width: 600px) {
+      height: 72px;
+      padding: 16px 32px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 16px 24px;
+    }
+  }
+
+  // .slider__quoter-photo-holder
+  &__quoter-photo-holder {
+    display: inline-block;
+    overflow: hidden;
+
+    width: 32px;
+    height: 32px;
+    margin-right: 8px;
+
+    border: 1px solid $moon;
+    border-radius: 100%;
+
+    @media (max-width: 600px) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  // .slider__quoter-photo
+  &__quoter-photo {
+    width: 100%;
+    height: 100%;
+  }
+
+  // .slider__quoter-name
+  &__quoter-name {
+    position: relative;
+
+    height: 100%;
+    padding-right: 24px;
+
+    line-height: 32px;
+
+    border-right: 1px solid $moon;
+
+    @media (max-width: 600px) {
+      top: -9px;
+
+      font-size: 14px;
+      line-height: 26px;
+
+      border-right: none;
+    }
+  }
+
+  // .slider__quoter-position
+  &__quoter-position {
+    position: relative;
+
+    padding-left: 20px;
+
+    @media (max-width: 600px) {
+      top: -23px;
+
+      display: block;
+
+      padding-left: 52px;
+
+      font-size: 14px;
+      line-height: 26px;
+    }
+  }
+}
