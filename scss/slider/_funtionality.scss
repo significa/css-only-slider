@@ -22,7 +22,7 @@ $end: 5; // Number of slides: 5 slides in this case
 
   // .slider__item
   &__item {
-    @include default-transition(transform);
+    @include default-transition(all);
 
     // Loop through .slider__item--(slide-number)
     @for $slide from $start through $end {

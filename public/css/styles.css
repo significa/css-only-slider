@@ -323,7 +323,7 @@ body {
 2.0 Cards
 --------------------------------------------------------------*/
 .slider__item {
-  transition: transform 0.2s ease; }
+  transition: all 0.2s ease; }
   #slide-1:checked ~ .slider__holder .slider__item--1 {
     position: relative;
     z-index: 2;
@@ -494,6 +494,7 @@ body {
 2.0 Slider
 3.0 Bullets
 4.0 Section
+5.0 Button
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Card
@@ -520,7 +521,8 @@ body {
     width: 100%;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 80px; }
+    margin-top: 80px;
+    text-align: left; }
     @media (max-width: 900px) {
       .slider__holder {
         max-width: 540px; } }
@@ -558,6 +560,7 @@ body {
   height: 10px;
   margin: 0 auto;
   margin-top: 48px;
+  margin-bottom: 56px;
   text-align: center; }
   @media (max-width: 600px) {
     .bullets {
@@ -579,7 +582,8 @@ body {
 .section {
   position: relative;
   width: 100%;
-  padding: 120px 24px; }
+  padding: 120px 24px;
+  text-align: center; }
   .section__entry {
     width: 100%;
     max-width: 380px;
@@ -591,3 +595,18 @@ body {
     padding-bottom: 12px; }
   .section__text {
     display: block; }
+
+/*--------------------------------------------------------------
+5.0 Button
+--------------------------------------------------------------*/
+.button {
+  display: inline-block;
+  height: 44px;
+  padding: 12px 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #FFF;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.2); }
+  .button:hover {
+    background: rgba(0, 0, 0, 0.1); }

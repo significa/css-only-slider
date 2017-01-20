@@ -5,6 +5,7 @@
 2.0 Slider
 3.0 Bullets
 4.0 Section
+5.0 Button
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -44,6 +45,8 @@
     max-width: 600px;
     margin: 0 auto;
     margin-top: 80px;
+
+    text-align: left;
 
     @media (max-width: 900px) {
       max-width: 540px;
@@ -103,6 +106,7 @@
   height: 10px;
   margin: 0 auto;
   margin-top: 48px;
+  margin-bottom: 56px;
 
   text-align: center;
 
@@ -140,6 +144,8 @@
   width: 100%;
   padding: 120px 24px;
 
+  text-align: center;
+
   // .section__entry
   &__entry {
     width: 100%;
@@ -162,5 +168,28 @@
   // .section__text
   &__text {
     display: block;
+  }
+}
+
+/*--------------------------------------------------------------
+5.0 Button
+--------------------------------------------------------------*/
+
+.button {
+  display: inline-block;
+
+  height: 44px;
+  padding: 12px 16px;
+
+  font-weight: 500;
+  line-height: 20px;
+
+  color: $white;
+  border-radius: 3px;
+  background: rgba($black, 0.2);
+
+  // .button:hover
+  &:hover {
+    background: rgba($black, 0.1);
   }
 }
