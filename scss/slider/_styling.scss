@@ -1,0 +1,166 @@
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Card
+2.0 Slider
+3.0 Bullets
+4.0 Section
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Card
+--------------------------------------------------------------*/
+
+.card {
+  position: relative;
+
+  display: block;
+
+  border-radius: 8px;
+  background: $white;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,0.05), 0 2px 4px 0 rgba(0,0,0,0.10);
+}
+
+/*--------------------------------------------------------------
+2.0 Slider
+--------------------------------------------------------------*/
+
+.slider {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  // .slider__radio
+  &__radio {
+    display: none;
+  }
+
+  // .slider__holder
+  &__holder {
+    position: relative;
+
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+
+    @media (max-width: 900px) {
+      max-width: 540px;
+    }
+
+    @media (max-width: 600px) {
+      margin-top: 60px;
+    }
+  }
+
+  // .slider__item
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+
+    opacity: 1;
+
+    cursor: pointer;
+  }
+
+  // .slider__item-content
+  &__item-content {
+    padding: 40px;
+
+    @media (max-width: 600px) {
+      padding: 32px 32px;
+    }
+
+    @media (max-width: 375px) {
+      padding: 40px 24px;
+    }
+  }
+
+  // .slider__item-text
+  &__item-text {
+    padding: 60px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+3.0 Bullets
+--------------------------------------------------------------*/
+
+.bullets {
+  z-index: 10;
+
+  display: block;
+
+  width: auto;
+  height: 10px;
+  height: 10px;
+  margin: 0 auto;
+  margin-top: 48px;
+
+  text-align: center;
+
+  @media (max-width: 600px) {
+    margin-top: 32px;
+  }
+
+  // .bullets__item
+  &__item {
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+
+    border-radius: 6px;
+    background: rgba($black, 0.2);
+
+    cursor: pointer;
+
+    // .bullets__item:hover
+    &:hover {
+      background: $white;
+    }
+  }
+}
+
+/*--------------------------------------------------------------
+4.0 Section
+--------------------------------------------------------------*/
+
+.section {
+  position: relative;
+
+  width: 100%;
+  padding: 120px 24px;
+
+  // .section__entry
+  &__entry {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+
+    // .section__entry--center
+    &--center {
+      text-align: center;
+    }
+  }
+
+  // .section__title
+  &__title {
+    display: block;
+
+    padding-bottom: 12px;
+  }
+
+  // .section__text
+  &__text {
+    display: block;
+  }
+}
