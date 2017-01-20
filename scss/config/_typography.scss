@@ -3,11 +3,11 @@
 ----------------------------------------------------------------
 1.0 HTML Settings
 2.0 General Settings
-3.0 Heading 1
-4.0 Heading 2
+3.0 Heading 2
+4.0 Serif
 5.0 Heading 3
-6.0 Uppercase
-7.0 Text
+6.0 Text
+7.0 Links
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -46,11 +46,7 @@ li {
 }
 
 /*--------------------------------------------------------------
-3.0 Heading 1
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-4.0 Heading 2
+3.0 Heading 2
 --------------------------------------------------------------*/
 
 .heading-2 {
@@ -68,67 +64,66 @@ li {
   &--white {
     color: $white;
 	}
-
-  //.heading-2--green
-  &--blue {
-    color: $significa;
-  }
 }
 
 /*--------------------------------------------------------------
-5.0 Heading 3
+4.0 Serif
 --------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-6.0 Uppercase
---------------------------------------------------------------*/
+.serif {
+	font-family: "Arnhem";
+	font-size: 24px;
+	font-weight: 100;
+	line-height: 38px;
 
-.uppercase {
-  font-family: $main-font;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
+	color: $night;
 
-  color: $significa;
-
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-
-  // SIZE MODIFIERS
-  //.uppercase--small
-  &--small {
-    font-size: 12px;
-    line-height: 14px;
-
-    letter-spacing: 0.3px;
-  }
-
-  //COLOR MODIFIERS
-  //.uppercase--white
-  &--white {
-    color: $white;
-  }
-
-	//.uppercase--red
-  &--grey {
-    color: $aluminum;
-  }
-
-  //.uppercase--dark
-  &--x-light {
-    color: $moon;
-  }
+	@media (max-width: 400px) {
+		font-size: 20px;
+		line-height: 32px;
+	}
 }
 
 /*--------------------------------------------------------------
-7.0 Text
+5.0 Heading-3
+--------------------------------------------------------------*/
+
+.heading-3 {
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 25px;
+
+	color: $night;
+
+	letter-spacing: 0.3px;
+
+	// .heading-3 + .heading-3
+	& + & {
+		margin-top: 5px;
+	}
+
+
+	//COLOR MODIFIERS
+	// .heading-3--white
+	&--white {
+		color: $white;
+	}
+
+	// .heading-3--light
+	&--light {
+		color: $aluminum;
+	}
+}
+
+/*--------------------------------------------------------------
+6.0 Text
 --------------------------------------------------------------*/
 
 .text {
   font-family: $main-font;
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 34px;
+	line-height: 30px;
 
   color: $aluminum;
 
@@ -140,33 +135,51 @@ li {
 	}
 
   //COLOR MODIFIERS
-  //.text--dark
-  &--dark {
-    color: $night;
+	&--light-white {
+    color: rgba($white, 0.7);
   }
+}
 
-  //.text--white
-  &--white {
-    color: $white;
-  }
+/*--------------------------------------------------------------
+7.0 Links
+--------------------------------------------------------------*/
 
-	//.text--blue
-  &--blue {
-    color: $significa;
-  }
+.link {
+	position: relative;
 
-	// SIZE MODIFIERS
-  //.text--small
-	&--small {
-		font-size: 16px;
-		line-height: 24px;
+	display: inline-block;
 
-		letter-spacing: -0.3px;
+	font-weight: 600;
+
+	color: $significa;
+
+	//.text--link:after
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: -32px;
+
+		display: block;
+
+		width: 24px;
+		height: 14px;
+
+		background-image: url('/images/slider/arrow__right--blue.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+
+		content: '';
+
+		@include translateY();
+		@include default-transition();
 	}
 
-	// WEIGHT MODIFIERS
-  //.text--bold
-	&--bold {
-		font-weight: 700;
+	//.text--link:hover
+	&:hover {
+		//.text--link:hover:after
+		&:after {
+			right: -48px;
+		}
 	}
 }
