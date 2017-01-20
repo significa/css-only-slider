@@ -282,7 +282,7 @@ li {
     display: block;
     width: 24px;
     height: 14px;
-    background-image: url("/images/slider/arrow__right--blue.svg");
+    background-image: url("../images/slider/arrow__right--blue.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
