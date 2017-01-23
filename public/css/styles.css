@@ -4,6 +4,7 @@
 1.0 Config
 2.0 General
 3.0 Slider
+4.0 All Tutorials
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 1.0 Config
@@ -610,3 +611,88 @@ body {
   background: rgba(0, 0, 0, 0.2); }
   .button:hover {
     background: rgba(0, 0, 0, 0.1); }
+
+/*--------------------------------------------------------------
+4.0 All Tutorials
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Labs bar
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Labs bar
+--------------------------------------------------------------*/
+.labs-bar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  padding: 8px 0px;
+  background: rgba(0, 0, 0, 0.2); }
+  .labs-bar__inner {
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; }
+  .labs-bar__nav {
+    position: relative;
+    display: block;
+    float: left; }
+  .labs-bar__link {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #FFF;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; }
+    .labs-bar__link:hover:before {
+      left: -16px; }
+    .labs-bar__link:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      display: block;
+      width: 24px;
+      height: 14px;
+      background-image: url("/images/general/arrow__right--white.svg");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+      content: '';
+      transform: translateY(-50%);
+      transition: all 0.2s ease; }
+  .labs-bar__branding {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFF; }
+  .labs-bar__logo {
+    width: auto;
+    height: 18px;
+    margin-top: 5px;
+    margin-left: 10px; }
+    .labs-bar__logo:hover {
+      opacity: 0.8; }
+  .labs-bar__button {
+    float: right;
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #FFF;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.5px;
+    text-transform: uppercase; }
+    .labs-bar__button:hover {
+      background: rgba(0, 0, 0, 0.1); }
