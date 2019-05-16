@@ -1,15 +1,15 @@
 # CSS Only Slider
 
-This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial or just [download](http://significa.pt/downloads/css-only-slider.zip) and try it by yourself.
+This tutorial will teach you how to create a SCSS only responsive slider. Feel free to read the whole tutorial and try it by yourself.
 
-[Article on Medium](https://medium.com/)
+[Article on Medium](https://medium.com/significa/css-only-slider-71727effff0b)
 
-[Demo](http://significa.pt/labs/css-only-slider.html)
+[Demo](https://significa.github.io/css-only-slider/)
 
 ## Credits
 
 - Code by Rui Sereno
-- [Significa](http://significa.pt)
+- [Significa](http://significa.co)
 
 ## Social
 
